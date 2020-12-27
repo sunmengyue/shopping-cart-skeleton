@@ -1,15 +1,16 @@
-import items from './items.json';
+import { setupStore } from './store.js';
 
-const addToCartBtn = document.querySelector('button.text-white');
-const cart = document.querySelector('button.fixed');
+setupStore();
 
-let itemsInCart = [];
+// const addToCartBtn = document.querySelector('button.text-white');
 
-addToCartBtn.addEventListener('click', () => {
-  showCart();
-});
+// let itemsInCart = [];
 
-function showCart() {
-  cart.classList.remove('invisible');
-  //item number + 1
-}
+// addToCartBtn.addEventListener('click', () => {
+//   showCart();
+// });
+
+// function showCart() {
+//   cart.classList.remove('invisible');
+//   //item number + 1
+// }
