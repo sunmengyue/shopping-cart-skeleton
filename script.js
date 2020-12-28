@@ -1,6 +1,8 @@
+import { setupShoppingCart } from './shoppingCart.js';
 import { setupStore } from './store.js';
 
 setupStore();
+setupShoppingCart();
 
 // const addToCartBtn = document.querySelector('button.text-white');
 
