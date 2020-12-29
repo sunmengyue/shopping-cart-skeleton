@@ -9,13 +9,12 @@ const cartQuantity = document.querySelector('[     data-cart-quantity]');
 const cartTotal = document.querySelector('[data-cart-total]');
 const cart = document.querySelector('[data-cart]');
 const removeButton = document.querySelector('[data-remove-from-cart-button]');
-
 const imgURL = 'https://dummyimage.com/210x130';
+
 export function setupShoppingCart() {
   addGlobalEventListener('click', '[ data-remove-from-cart-button]', (e) => {
     const id = parseInt(e.target.closest('[data-item]').dataset.id);
-
-    removeFromCart(parseInt(id));
+    removeFromCart(id);
   });
   renderCart();
 }
@@ -51,7 +50,7 @@ function showCart() {
 function removeFromCart(id) {
   const existingItem = shoppingCart.find((entry) => entry.id === id);
   if (existingItem == null) return;
-  shoppingCart.filter((entry) => entry.id !== id);
+  shoppingCart = shoppingCart.filter((entry) => entry.id !== id);
   renderCart();
 }
 

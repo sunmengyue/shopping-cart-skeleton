@@ -2,7 +2,6 @@ import items from './items.json';
 import formatCurrency from './util/formatCurrency.js';
 import { addItemToCart } from './shoppingCart.js';
 import addGlobalEventListener from './util/addGlobalEventListener.js';
-
 const storeItemTemplate = document.querySelector('#store-item-template');
 const realStoreItemContainer = document.querySelector('[data-store-container]');
 const imgURL = 'https://dummyimage.com/420x260';
